@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        .desno img {
+            width: 300px;
+            height: 400px;
+            object-fit: cover;
+            border: 1px solid black;
+        }
+
+        li {
+            cursor: pointer;
+            margin: 5px 0;
+        }
+
+        li:hover {
+            color: blue;
+        }
+    </style>
+</head>
+<body class="p-4">
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <h2>Literatura</h2>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#web"
+                                onclick="prikaziSliku('img/slider_1.jpg')">
+                            Osnove Web programiranja
+                        </button>
+                    </h2>
+
+                    <div id="web" class="accordion-collapse collapse show">
+                        <div class="accordion-body">
+                            <ul>
+                                <li onclick="prikaziSliku('img/slider_1.jpg')">HTML5 knjiga</li>
+                                <li onclick="prikaziSliku('img/slider_2.jpg')">CSS3 knjiga</li>
+                                <li onclick="prikaziSliku('img/slider_3.jpg')">AJAX knjiga</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#skriptni"
+                                onclick="prikaziSliku('img/slider_4.jpg')">
+                            Skriptni programski jezici
+                        </button>
+                    </h2>
+
+                    <div id="skriptni" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            <ul>
+                                <li onclick="prikaziSliku('img/slider_4.jpg')">JavaScript</li>
+                                <li onclick="prikaziSliku('img/slider_5.jpg')">jQuery</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-md-6 desno text-center">
+            <img id="slika" src="img/slider_1.jpg">
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/prilog_LV4/js/lista.js"></script>
+
+</body>
+</html>
